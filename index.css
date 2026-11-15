@@ -1,0 +1,209 @@
+/* --- Глобальные настройки (Темная тема) --- */
+:root {
+  --bg-dark: #282c34;
+  --bg-card: #3a3f4b;
+  --accent-purple: #b07cff;
+  --accent-red: #ff4d4d;
+  --accent-green: #4CAF50;
+  --text-light: #ffffff;
+  --text-muted: #a0a0a0;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-main);
+}
+
+/* --- Шапка и навигация --- */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e2127;
+  border-bottom: 2px solid #444;
+}
+
+.app-nav button {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--accent-purple);
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.app-nav button:hover, .app-nav button.active {
+  background-color: var(--accent-purple);
+  color: var(--bg-dark);
+}
+
+/* Кнопка выхода и админа */
+.btn-logout {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Каталог услуг (Сетка) --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  border: 2px solid #4a4e59;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-purple);
+}
+
+.service-card h3 {
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.service-price {
+  font-size: 18px;
+  color: var(--accent-purple);
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.service-card button {
+  background-color: #4a4e59;
+  color: var(--text-light);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.service-card button:hover {
+  background-color: var(--accent-purple);
+  color: var(--bg-dark);
+}
+
+/* --- Карточка записи (Корзина) --- */
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #555;
+}
+
+.cart-item-title {
+  font-size: 18px;
+}
+
+.cart-item-price {
+  color: var(--accent-purple);
+  font-weight: bold;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: var(--text-light);
+}
+
+.btn-delete {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background-color: var(--accent-red);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* --- Боковая панель категорий --- */
+.sidebar {
+  width: 200px;
+  background-color: #1e2127;
+  padding: 20px;
+  border-right: 1px solid #444;
+  min-height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar li:hover {
+  background-color: #3a3f4b;
+}
+
+.sidebar li.active {
+  background-color: var(--accent-purple);
+  color: var(--bg-dark);
+  font-weight: bold;
+}
+
+/* --- Формы и инпуты --- */
+input, select {
+  background-color: #1e2127;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+}
